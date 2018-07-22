@@ -14,7 +14,9 @@ namespace OdeToFood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
-            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();
+
+            //this is only for dev .. lateron will add the implementation for database
+            services.AddSingleton<IRestaurantData, InMemoryRestaurantData>();
             services.AddMvcCore().AddJsonFormatters();
             services.AddMvcCore().AddRazorViewEngine();
         }
