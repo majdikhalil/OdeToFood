@@ -14,5 +14,13 @@
     <Folder Include="Services\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Shared\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" version="2.0.0"></DotNetCliToolReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20180723024247_InitalCreateMigration.cs" />
+    <Compile Remove="Migrations\20180723024247_InitalCreateMigration.Designer.cs" />
   </ItemGroup>
 </Project>
