@@ -15,6 +15,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Data\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" version="2.0.0"></DotNetCliToolReference>

@@ -2,25 +2,23 @@
 
 @{
     ViewBag.Title = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>@Model.CurrentMessage</h1>
+<h1>All Restaurants</h1>
 <table>
-        @foreach (var restaurant in Model.Restaurants)
-        {
-            <tr>
-                <td>@restaurant.Id</td>
-                <td>@restaurant.Name</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@restaurant.Id">More</a>
-                </td>
-            </tr >
-         }
-<<<<<<< HEAD
-    </table>
-=======
-    </table>
-    <a asp-action="Create">Add Restaurant</a>
-</body>
-</html>
->>>>>>> 7e192800d4bb260a1264c150111b05bccaf992f4
+    @foreach (var restaurant in Model.Restaurants)
+    {
+        <tr>
+            <td>@restaurant.Name</td>
+            <td>@restaurant.Id</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@restaurant.Id">More</a>
+                <a asp-action="Edit" asp-route-id="@restaurant.Id">Edit</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create">Add Restaurant</a>
+@section footer {
+    @Model.CurrentMessage
+}
